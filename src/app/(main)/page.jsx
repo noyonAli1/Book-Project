@@ -2,22 +2,25 @@ import BreakingNews from '@/components/shared/BreakingNews';
 import Hader from '@/components/shared/Hader';
 import ReadingSection from '@/components/shared/ReadingSection';
 import WhyChoose from '@/components/shared/WhyChoose';
-import React from 'react';
+import FeaturedBooks from '@/components/shared/FeaturedBooks';
 
-const page = () => {
-    return (
-        <>
+const page = async () => {
 
-            <Hader></Hader>
-            <BreakingNews></BreakingNews>
-            <div>
-                <h1>home page</h1>
-            </div>
+  const res = await fetch("http://localhost:3000/book.json");
+  const data = await res.json();
 
-            <WhyChoose></WhyChoose>
-            <ReadingSection></ReadingSection>
-        </>
-    );
+  return (
+    <>
+      <Hader />
+      <BreakingNews />
+
+    
+      <FeaturedBooks data={data} />
+
+      <WhyChoose />
+      <ReadingSection />
+    </>
+  );
 };
 
 export default page;

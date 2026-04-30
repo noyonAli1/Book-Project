@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "The Midnight Library",
+    "author": "Matt Haig",
+    "description": "A story about the choices that go into a life well lived, set in a library between life and death.",
+    "category": "Story",
+    "available_quantity": 15,
+    "image_url": "https://picsum.photos/200/300?random=1"
+  },
+  {
+    "id": 2,
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "description": "A handbook of agile software craftsmanship, essential for any tech enthusiast.",
+    "category": "Tech",
+    "available_quantity": 8,
+    "image_url": "https://picsum.photos/200/300?random=2"
+  },
+  {
+    "id": 3,
+    "title": "Astrophysics for People in a Hurry",
+    "author": "Neil deGrasse Tyson",
+    "description": "A quick and clear guide to the nature of space and time and the universe's secrets.",
+    "category": "Science",
+    "available_quantity": 20,
+    "image_url": "https://picsum.photos/200/300?random=3"
+  },
+  {
+    "id": 4,
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "description": "A mystical story of Santiago, an Andalusian shepherd boy who yearns to travel in search of a worldly treasure.",
+    "category": "Story",
+    "available_quantity": 25,
+    "image_url": "https://picsum.photos/200/300?random=4"
+  },
+  {
+    "id": 5,
+    "title": "React Design Patterns",
+    "author": "Michele Bertoli",
+    "description": "Learn how to build scalable and maintainable applications with modern React practices.",
+    "category": "Tech",
+    "available_quantity": 12,
+    "image_url": "https://picsum.photos/200/300?random=5"
+  },
+  {
+    "id": 6,
+    "title": "Brief Answers to the Big Questions",
+    "author": "Stephen Hawking",
+    "description": "The final book from one of the greatest minds in history, discussing the universe's biggest mysteries.",
+    "category": "Science",
+    "available_quantity": 10,
+    "image_url": "https://picsum.photos/200/300?random=6"
+  },
+  {
+    "id": 7,
+    "title": "The Kite Runner",
+    "author": "Khaled Hosseini",
+    "description": "An emotional story of friendship, betrayal, and redemption in war-torn Afghanistan.",
+    "category": "Story",
+    "available_quantity": 18,
+    "image_url": "https://picsum.photos/200/300?random=7"
+  },
+  {
+    "id": 8,
+    "title": "Pragmatic Programmer",
+    "author": "Andrew Hunt",
+    "description": "A classic guide to turning from a coder into a professional software developer.",
+    "category": "Tech",
+    "available_quantity": 5,
+    "image_url": "https://picsum.photos/200/300?random=8"
+  },
+  {
+    "id": 9,
+    "title": "The Selfish Gene",
+    "author": "Richard Dawkins",
+    "description": "A landmark work in evolutionary biology that reshaped how we think about natural selection.",
+    "category": "Science",
+    "available_quantity": 14,
+    "image_url": "https://picsum.photos/200/300?random=9"
+  },
+  {
+    "id": 10,
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "description": "A story of ambition, love, and the American dream in the 1920s.",
+    "category": "Story",
+    "available_quantity": 30,
+    "image_url": "https://picsum.photos/200/300?random=10"
+  },
+  {
+    "id": 11,
+    "title": "Understanding Deep Learning",
+    "author": "Simon Prince",
+    "description": "A comprehensive tech guide to neural networks and the future of artificial intelligence.",
+    "category": "Tech",
+    "available_quantity": 7,
+    "image_url": "https://picsum.photos/200/300?random=11"
+  },
+  {
+    "id": 12,
+    "title": "Cosmos",
+    "author": "Carl Sagan",
+    "description": "A journey through the evolution of the universe and the human curiosity that explores it.",
+    "category": "Science",
+    "available_quantity": 22,
+    "image_url": "https://picsum.photos/200/300?random=12"
+  }
+]

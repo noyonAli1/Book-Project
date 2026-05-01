@@ -2,7 +2,7 @@ import BreakingNews from '@/components/shared/BreakingNews';
 import Hader from '@/components/shared/Hader';
 import ReadingSection from '@/components/shared/ReadingSection';
 import WhyChoose from '@/components/shared/WhyChoose';
-import FeaturedBooks from '@/components/shared/FeaturedBooks';
+import FeaturedBooks from '@/app/allcard/FeaturedBooks';
 
 const page = async () => {
 

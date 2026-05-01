@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import { useState } from "react";
 
 const FeaturedBooks = ({ data }) => {
@@ -58,9 +58,11 @@ const FeaturedBooks = ({ data }) => {
                   </p>
                 </div>
 
-                <button className="mt-3 w-full bg-purple-600 text-white py-1.5 rounded-md text-sm hover:bg-purple-700">
-                  View Details
-                </button>
+                <Link href={`/allcard/${book.id}`}>
+                  <button className="mt-3 w-full cursor-pointer bg-purple-600 text-white py-1.5 rounded-md text-sm hover:bg-purple-700">
+                    View Details
+                  </button>
+                </Link>
               </div>
             ))}
 

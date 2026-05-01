@@ -18,7 +18,7 @@ const Hader = () => {
     <div className="absolute inset-0 bg-black/70"></div>
 
     {/* Content */}
-    <div className="relative z-10 h-full flex items-center container mx-auto px-4 md:px-8 lg:px-0">
+    <div className="relative z-10 h-full flex items-center container mx-auto px-4 md:px-8 lg:px-0 lg:mr-40 mr-0">
       
       <div className=" max-w-xl text-white ml-2 sm:ml-4 md:ml-16 lg:ml-0 mr- ">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mt-16 md:mt-20">

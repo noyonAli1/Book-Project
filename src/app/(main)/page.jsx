@@ -4,18 +4,18 @@ import ReadingSection from '@/components/shared/ReadingSection';
 import WhyChoose from '@/components/shared/WhyChoose';
 import FeaturedBooks from '@/components/shared/FeaturedBooks';
 
-const page =  () => {
+const page = async () => {
 
-  // const res = await fetch("http://localhost:3000/book.json");
-  // const data = await res.json();
+  const res = await fetch("https://book-project-p175.vercel.app/book.json");
+  const data = await res.json();
 
   return (
     <>
       <Hader />
       <BreakingNews />
 
-    {/* data={data} */}
-      {/* <FeaturedBooks  /> */}
+    
+      <FeaturedBooks data={data} />
 
 
       <WhyChoose />

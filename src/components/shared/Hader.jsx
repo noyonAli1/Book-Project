@@ -7,7 +7,7 @@ const Hader = () => {
   <div>
     {/* Background Image */}
     <Image
-      src="/book.jpg"
+      src="/newbook.png"
       alt="Header Background"
       fill
       className="object-cover"
@@ -20,7 +20,7 @@ const Hader = () => {
     {/* Content */}
     <div className="relative z-10 h-full flex items-center container mx-auto px-4 md:px-8 lg:px-0">
       
-      <div className=" max-w-xl text-white ml-2 sm:ml-4 md:ml-16 lg:ml-0 ">
+      <div className=" max-w-xl text-white ml-2 sm:ml-4 md:ml-16 lg:ml-0 mr- ">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mt-16 md:mt-20">
           Find Your <br />
           <span className="text-purple-500">Next Read</span>

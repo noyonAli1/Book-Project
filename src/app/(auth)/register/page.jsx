@@ -1,72 +1,118 @@
-// "use client";
-// import React from 'react';
-
-// import Link from 'next/link';
-// import { useForm } from 'react-hook-form';
-
-// const RegisterPage = () => {
-//     const { register, handleSubmit ,formState:{errors} } = useForm();
-
-
-//     const handleLoginFunc = (data) => {
-       
-//   console.log(data);
-//   console.log(errors);
-
-//   const {name,photo,password,email}= data;
-//       console.log(name,photo,password,email);
-      
-
-//     };
 
 
 
-//     return (
-//         <div className='container mx-auto min-h-[80vh] flex justify-center items-center bg-slate-100'>
-//             <div className='p-4 rounded-xl bg-white'>
-//                 <h2 className='font-bold text-3xl text-center mb-6'>Login Your account</h2>
-
-//                 <form className='space-y-4' onSubmit={handleSubmit(handleLoginFunc)}>
-//                      <fieldset className="fieldset">
-//                         <legend className="fieldset-legend">Name</legend>
-//                         <input  type="text" className="input" placeholder="Inter Your Name" {...register("name", { required: true })} />
-//                            {errors.name && <p>Error name</p>}
-//                     </fieldset>
-
-//                      <fieldset className="fieldset">
-//                         <legend className="fieldset-legend">Photo URL</legend>
-//                         <input  type="text" className="input" placeholder="Inter Your Photo url" {...register("photo", { required: true })} />
-//                            {errors.Photo && <p>Error Photo</p>}
-//                     </fieldset>
-
-//                     <fieldset className="fieldset">
-//                         <legend className="fieldset-legend">Email</legend>
-//                         <input  type="email" className="input" placeholder="Inter Your Email" {...register("email")} />
-
-//                     </fieldset>
-//                     <fieldset className="fieldset">
-//                         <legend className="fieldset-legend">Password</legend>
-//                         <input  type="password" className="input" placeholder="Inter Your Password" {...register("password", { required: true })} />
-//                            {errors.password && <p>Error pasword</p>}
-//                     </fieldset>
-//                     <button className="btn bg-slate-800 text-white w-full">Register</button>
-//                 </form>
-//                 <p className='mt-2'>Dont have an account? <Link className='text-blue-500' href={"/login"}>Login</Link> </p>
-
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default RegisterPage;
-
-
+import Link from 'next/link';
 import React from 'react';
 
 const page = () => {
     return (
-        <div>
-            <h2>Register Page</h2>
+        <div class="min-h-screen flex items-center justify-center  p-4">
+
+
+            <div class="flex w-full max-w-5xl bg-white backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden">
+
+
+                <div class="hidden md:flex w-1/2 bg-gradient-to-br from-purple-700 to-indigo-600 p-10 items-center justify-center relative">
+
+
+                    <img
+                        src="/reg.png"
+                        className="w-full rounded-3xl py-2 h-full object-cover"
+                    />
+
+
+                </div>
+
+                <div class="w-full md:w-1/2 p-8 sm:p-10">
+
+
+                    <h2 class="text-3xl font-bold text-gray-800">
+                        Create Account
+                    </h2>
+                    <p class="text-gray-500 mt-1 mb-6">
+                        Join Book World today
+                    </p>
+
+
+                    <form class="space-y-4">
+
+
+                        <div>
+                            <label class="text-sm text-gray-600">Full Name</label>
+                            <input
+                                type="text"
+                                placeholder="Enter your name"
+                                class="w-full mt-1 px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition hover:shadow-md"
+                            />
+                        </div>
+
+
+                        <div>
+                            <label class="text-sm text-gray-600">Email Address</label>
+                            <input
+                                type="email"
+                                placeholder="Enter your email"
+                                class="w-full mt-1 px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition hover:shadow-md"
+                            />
+                        </div>
+
+
+                        <div>
+                            <label class="text-sm text-gray-600">Photo URL</label>
+                            <input
+                                type="text"
+                                placeholder="Enter photo URL"
+                                class="w-full mt-1 px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition hover:shadow-md"
+                            />
+                        </div>
+
+
+                        <div>
+                            <label class="text-sm text-gray-600">Password</label>
+                            <input
+                                type="password"
+                                placeholder="Create a password"
+                                class="w-full mt-1 px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition hover:shadow-md"
+                            />
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="w-full py-3 rounded-xl text-white font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 hover:scale-[1.02] hover:shadow-lg transition duration-300"
+                        >
+                            Register
+                        </button>
+
+                        <div class="text-center text-gray-400 text-sm">
+                            ── or continue with ──
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="w-full py-3 rounded-xl border flex items-center justify-center gap-2 hover:bg-gray-50 hover:shadow transition"
+                        >
+                            <img
+                                src="https://www.svgrepo.com/show/475656/google-color.svg"
+                                class="w-5 h-5"
+                            />
+                            Continue with Google
+                        </button>
+
+
+                        <p class="text-center text-sm text-gray-600 mt-4">
+                            Already have an account?
+                            <Link href="/login" class="text-purple-600 font-medium hover:underline">
+                                Login here
+                            </Link>
+                        </p>
+
+                    </form>
+
+                </div>
+
+            </div>
         </div>
     );
 };

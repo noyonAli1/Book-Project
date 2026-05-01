@@ -1,7 +1,7 @@
 
 "use client";
 
-import { authClient } from '@/lib/auth-client';
+// import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
 import React from 'react';
 
@@ -104,7 +104,7 @@ const page = () => {
 
 
                         <button
-                            onSubmit={onSubmit}
+                           
                             type="submit"
                             className="w-full py-3 rounded-xl text-white font-semibold bg-gradient-to-r from-purple-600 to-indigo-600"
                         >

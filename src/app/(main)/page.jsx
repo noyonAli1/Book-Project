@@ -4,18 +4,18 @@ import ReadingSection from '@/components/shared/ReadingSection';
 import WhyChoose from '@/components/shared/WhyChoose';
 import FeaturedBooks from '@/components/shared/FeaturedBooks';
 
-const page = async () => {
+const page =  () => {
 
-  const res = await fetch("http://localhost:3000/book.json");
-  const data = await res.json();
+  // const res = await fetch("http://localhost:3000/book.json");
+  // const data = await res.json();
 
   return (
     <>
       <Hader />
       <BreakingNews />
 
-    
-      <FeaturedBooks data={data} />
+    {/* data={data} */}
+      {/* <FeaturedBooks  /> */}
 
 
       <WhyChoose />

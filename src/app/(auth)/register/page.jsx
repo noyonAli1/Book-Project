@@ -7,25 +7,25 @@ import React from 'react';
 
 const page = () => {
 
-    const onSubmit = async (e) => {
-        e.preventDefault();
-        const name = e.target.name.value;
-        const email = e.target.email.value;
-        const password = e.target.password.value;
-        const photoURL = e.target.photoURL.value;
-        console.log({ name, email, password, photoURL });
+    // const onSubmit = async (e) => {
+    //     e.preventDefault();
+    //     const name = e.target.name.value;
+    //     const email = e.target.email.value;
+    //     const password = e.target.password.value;
+    //     const photoURL = e.target.photoURL.value;
+    //     console.log({ name, email, password, photoURL });
 
 
 
-        const { data, error } = await authClient.login.email({
-            email,
-            password,
-            name,
-            photoURL
-        })
-        console.log({ data, error });
+    //     const { data, error } = await authClient.login.email({
+    //         email,
+    //         password,
+    //         name,
+    //         photoURL
+    //     })
+    //     console.log({ data, error });
 
-    };
+    // };
 
     return (
         <div className="min-h-screen flex items-center justify-center  p-4">

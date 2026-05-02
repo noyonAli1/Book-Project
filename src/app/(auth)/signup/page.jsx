@@ -34,6 +34,11 @@ const SignupPage = () => {
         // }
 
 
+        if(!error){
+            alert("Registration successful! Please log in.");
+        } else {
+            alert("Registration failed: " + error.message);
+        }
         router.push("/");
     };
 

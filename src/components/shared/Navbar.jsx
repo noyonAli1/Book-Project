@@ -38,14 +38,14 @@ const Navbar = () => {
         {/* Desktop Button */}
        <div className="flex gap-2">
          <Link
-          href="/login"
+          href="/signin"
           className="hidden md:block bg-purple-700 hover:bg-purple-800 px-5 py-2 rounded-md"
         >
           Login
         </Link>
         
         <Link
-          href="/register"
+          href="/signup"
           className="hidden md:block bg-purple-700 hover:bg-purple-800 px-5 py-2 rounded-md"
         >
           Register

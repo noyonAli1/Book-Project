@@ -9,7 +9,7 @@ const BooksPage = () => {
     const [category, setCategory] = useState("All");
     const [loading, setLoading] = useState(true);
 
-    // 🔥 Fetch data
+    
     useEffect(() => {
         const fetchBooks = async () => {
             try {
@@ -77,7 +77,7 @@ const BooksPage = () => {
                     />
                 </div>
 
-                {/* ⏳ Loading */}
+              
                 {loading ? (
                     <p className="text-center mt-10 text-gray-500"><span className="loading loading-spinner text-error"></span> Loading...</p>
                 ) : (

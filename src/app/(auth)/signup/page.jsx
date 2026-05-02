@@ -5,6 +5,7 @@ import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import React from "react";
 import { useRouter } from "next/navigation";
+import { Description, FieldError, Input, Label, TextField } from "@heroui/react";
 
 const SignupPage = () => {
     const router = useRouter();
@@ -14,10 +15,10 @@ const SignupPage = () => {
 
         const name = e.target.name.value;
         const email = e.target.email.value;
-        const image = e.target.photoURL.value; 
+        const image = e.target.image.value;
         const password = e.target.password.value;
 
-         console.log({ name, email, image, password });
+        console.log({ name, email, image, password });
 
         const { data, error } = await authClient.signUp.email({
             name,
@@ -27,8 +28,11 @@ const SignupPage = () => {
         });
 
         console.log({ data, error });
+        // if (error) {
+        //     alert(error.message);
+        //     return;
+        // }
 
-     
 
         router.push("/");
     };
@@ -56,61 +60,76 @@ const SignupPage = () => {
 
                     <form onSubmit={onSubmit} className="space-y-4">
 
-                      
-                        <div>
-                            <label className="text-sm text-gray-600">Full Name</label>
-                            <input
-                                name="name"
-                                type="text"
-                                required
-                                className="w-full mt-1 px-4 py-3 rounded-xl border"
-                            />
-                        </div>
 
-                     
-                        <div>
-                            <label className="text-sm text-gray-600">Email Address</label>
-                            <input
-                                name="email"
-                                type="email"
-                                required
-                                className="w-full mt-1 px-4 py-3 rounded-xl border"
-                            />
-                        </div>
+                        <TextField isRequired name="name" type="text"  >
+                            <Label>Name</Label>
+                            <Input className="w-full mt-1 px-4 py-3 rounded-xl border" placeholder="Enter your name" />
+                            <FieldError />
+                        </TextField>
 
-                       
-                        <div>
-                            <label className="text-sm text-gray-600">Photo URL</label>
-                            <input
-                                name="photoURL"
-                                type="text"
-                                required
-                                className="w-full mt-1 px-4 py-3 rounded-xl border"
-                            />
-                        </div>
 
-                        <div>
-                            <label className="text-sm text-gray-600">Password</label>
-                            <input
-                                name="password"
-                                type="password"
-                                required
-                                minLength={8}
-                                className="w-full mt-1 px-4 py-3 rounded-xl border"
-                            />
-                        </div>
+                        <TextField
+                            isRequired
+                            name="email"
+                            type="email"
+                            validate={(value) => {
+                                if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)) {
+                                    return "Please enter a valid email address";
+                                }
+
+                                return null;
+                            }}
+                        >
+                            <Label>Email</Label>
+                            <Input className="w-full mt-1 px-4 py-3 rounded-xl border" placeholder="john@example.com" />
+                            <FieldError />
+                        </TextField>
+
+
+                        <TextField isRequired name="image" type="text">
+                            <Label>Image URL</Label>
+                            <Input className="w-full mt-1 px-4 py-3 rounded-xl border" placeholder="Image URL" />
+                            <FieldError />
+                        </TextField>
+
+                        <TextField
+                            isRequired
+                            minLength={8}
+                            name="password"
+                            type="password"
+                            validate={(value) => {
+                                if (value.length < 8) {
+                                    return "Password must be at least 8 characters";
+                                }
+                                if (!/[A-Z]/.test(value)) {
+                                    return "Password must contain at least one uppercase letter";
+                                }
+                                if (!/[0-9]/.test(value)) {
+                                    return "Password must contain at least one number";
+                                }
+
+                                return null;
+                            }}
+                        >
+                            <Label>Password</Label>
+                            <Input className="w-full mt-1 px-4 py-3 rounded-xl border" placeholder="Enter your password" />
+                            <Description>
+                                Must be at least 8 characters with 1 uppercase and 1 number
+                            </Description>
+                            <FieldError />
+                        </TextField>
 
                         <button
                             type="submit"
                             className="w-full py-3 rounded-xl text-white font-semibold bg-gradient-to-r from-purple-600 to-indigo-600"
                         >
-                             Sign Up
+                            Sign Up
                         </button>
 
 
 
 
-                         <button
+                        <button
                             type="button"
                             className="w-full py-3 rounded-xl border flex items-center justify-center gap-2 hover:bg-gray-50 transition"
                         >

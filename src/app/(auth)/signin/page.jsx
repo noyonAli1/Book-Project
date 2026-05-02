@@ -5,6 +5,7 @@ import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import React from "react";
 import { useRouter } from "next/navigation";
+import { FieldError, Input, Label, TextField } from "@heroui/react";
 
 const SignupPage = () => {
     const router = useRouter();
@@ -60,29 +61,45 @@ const SignupPage = () => {
 
 
 
-                        <div>
-                            <label className="text-sm text-gray-600">Email Address</label>
-                            <input
-                                name="email"
-                                type="email"
-                                required
-                                className="w-full mt-1 px-4 py-3 rounded-xl border"
-                            />
-                        </div>
+                        <TextField
+                            isRequired
+                            name="email"
+                            type="email"
+                            validate={(value) => {
+                                if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)) {
+                                    return "Please enter a valid email address";
+                                }
+
+                                return null;
+                            }}
+                        >
+                            <Label>Email</Label>
+                            <Input className="w-full mt-1 px-4 py-3 rounded-xl border" placeholder="john@example.com" />
+                            <FieldError />
+                        </TextField>
 
 
 
 
-                        <div>
-                            <label className="text-sm text-gray-600">Password</label>
-                            <input
-                                name="password"
-                                type="password"
-                                required
-                                minLength={8}
-                                className="w-full mt-1 px-4 py-3 rounded-xl border"
-                            />
-                        </div>
+
+                        <TextField
+                            isRequired
+                            name="password"
+                            type="password"
+                            validate={(value) => {
+                                if (value.length < 8) {
+                                    return "Password must be at least 8 characters long";
+                                }
+
+                                return null;
+                            }}
+                        >
+                            <Label>Password</Label>
+                            <Input className="w-full mt-1 px-4 py-3 rounded-xl border" placeholder="••••••••" />
+                            <FieldError />
+                        </TextField>
+
+
 
                         <button
                             type="submit"
